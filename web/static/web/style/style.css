@@ -1,0 +1,155 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0.5rem;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.navbar {
+    background-color: #8CB9BD;
+}
+
+.nav-link, .navbar-brand {
+    color: #FEFBF6;
+}
+
+.hero {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    height: 100vh;
+    background-color: #8CB9BD;
+    border: 1px solid #8CB9BD;
+}
+
+.herotitle, .hero, .author, .details, .title, .description, li, footer , .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    margin-top: 5rem;
+    align-self: flex-start;
+}
+
+.list > a {
+    margin-left: 1rem;
+}
+
+.herotitle {
+    flex-direction: column;
+}
+
+.quote {
+    font-size: 70px;
+    color: #FEFBF6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.author {
+    justify-content: end;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FEFBF6;
+}
+
+.details {
+    flex-direction: column;
+    /* background-color: #89023E;
+    border: 1px solid #89023E; */
+    padding: 30px;
+}
+
+.title {
+    color: #B67352;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 20px;
+}
+
+/* Basic styling for the footer */
+footer {
+    background-color: #333;
+    flex-direction: column;
+    height: 50vh;
+}
+/* Additional styling for links */
+footer > * {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer, a {
+    color: #FEFBF6;
+}
+
+.bradius {
+    border: 1px solid #00000000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+a.button {
+    margin-top: 3rem;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color:#FEFBF6;
+    font-size: 25px;
+    border: 3px solid #FEFBF6;
+}
+
+a.button:hover {
+    color: #333;
+    background-color: #FEFBF6A0;
+    border: 3px solid #333;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.project-image {
+    flex: 0 0 200px; /* Fixed width for the image */
+    margin-right: 20px;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #00000000;
+    border-radius: 20px;
+}
+.project-details {
+    margin-top: 1rem;
+    flex: 1; /* Take remaining space */
+}
+.project-title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: #B67352;
+}
+.project-tags {
+    margin-bottom: 10px;
+}
+.project-description > * {
+    font-size: 16px;
+    color: #333;
+}

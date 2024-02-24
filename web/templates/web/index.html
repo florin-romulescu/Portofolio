@@ -1,0 +1,131 @@
+{% extends 'web/utils/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block menubar %}
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">{{ owner.last_name }} {{ owner.first_name }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block hero %} 
+<div class="container-fluid hero">
+    <div class="herotitle container">
+        <div class="quote container">
+            "<b style="color: #B67352;">Computer science</b> is no more about computers than <i style="color: #B67352;">astronomy</i> is about telescopes."
+        </div>
+        <div class="author container">
+            - Edsger Dijkstra
+        </div>
+        
+        <a href="#about" class="button"><b>Explore</b></a>
+    </div>
+</div>
+
+<div class="container-fluid hero bradius" style="background-color: #FEFBF6;" id="about">
+  <div class="herotitle container">
+      <div class="quote container">
+        <b style="color: #8CB9BD;">Greetings...</b><br>
+        <p style="font-size: 30px; color: #393939;"><b style="color: #8CB9BD;">I'm {{ owner.first_name }} {{owner.last_name}}</b>, a computer science student passionate about mathematics, machine learning, and programming.
+        I'm eager to connect with like-minded individuals, deepen my knowledge, and explore new opportunities.</p>
+      </div>
+      <div class="list container">
+        <a href="https://linkedin.com/in/florin-romulescu" target="_blank"><img src="{% static 'web/icons/linkedin.svg' %}" alt="linkedin" height="30px" width="30px"></a>
+        <a href="https://github.com/florin-romulescu" target="_blank"><img src="{% static 'web/icons/github.svg' %}" alt="github" height="30px" width="30px"></a>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block main %}
+
+<div class="details container-fluid">
+    <div class="title container">My Skills</div>
+    <div class="description container">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <ul>
+                  <li>Programming Languages</li>
+                  <li>Data Structures</li>
+                  <li>Algorithms</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul>
+                  <li>OOP</li>
+                  <li>Database Management</li>
+                  <li>Software Engineering</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul>
+                  <li>Machine Learning</li>
+                  <li>Deep Learning</li>
+                  <li>Networking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="title" id="projects">Projects
+    </div>
+    {% for project in projects %}
+    <div class="row projects">
+        <!-- Project 1 -->
+          <div class="project-container">
+          <a href="{{ project.url }}" class="project-description">
+            <div class="project-image">
+                <img src="{% static project.image %}" alt="Project 1">
+            </div>
+          </a>
+            <div class="project-details">
+                <div class="project-title">{{ project.title }}</div>
+                <div class="project-tags">
+                </div>
+                <div class="project-description">
+                    {{ project.description }}
+                </div>
+            </div>
+        </div>
+      <hr>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+  <p>Contact me:</p>
+  <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+  <p>Github: <a href="https://github.com/florin-romulescu">github.com/florin-romulescu</a></p>
+  <p>Linkedin: <a href="https://linkedin.com/in/florin-romulescu">in/florin-romulescu</a></p>
+{% endblock %}

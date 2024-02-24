@@ -2,3 +2,4 @@
 db.sqlite3
 web/migrations/*
 media/*
+/web/static/images/*

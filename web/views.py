@@ -5,7 +5,7 @@ from . import models
 class IndexPage:
     template_name="web/index.html"
     context = {
-        "title" : "Test title",
+        "title" : "Portofolio",
     }
     
     @staticmethod

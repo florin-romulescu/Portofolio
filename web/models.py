@@ -1,5 +1,4 @@
 from django.db import models
-from colorfield.fields import ColorField
 
 class Owner(models.Model):
     """
@@ -14,6 +13,9 @@ class Owner(models.Model):
     
     def __str__(self) -> str:
         return self.first_name + " " + self.last_name
+    
+    def nickname(self) -> str:
+        return self.first_name.split("-")[0] + self.last_name
 
 # Create your models here.
 class Project(models.Model):
@@ -35,7 +37,7 @@ class Tag(models.Model):
     Represent a tag and its properties
     """
     name = models.CharField(max_length=31)
-    color = ColorField(default='#FFFFFF') # white
+    color = models.CharField(max_length=6) # white
     projects = models.ManyToManyField(Project, related_name="tags", null=True, blank=True)
     
     @property

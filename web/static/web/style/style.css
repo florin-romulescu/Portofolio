@@ -55,6 +55,10 @@ li {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+p#description {
+    font-size: 30px;
+}
+
 .author {
     justify-content: end;
     font-size: 30px;
@@ -152,4 +156,35 @@ a.button:hover {
 .project-description > * {
     font-size: 16px;
     color: #333;
+}
+
+li {
+    font-size: 20px;
+}
+
+@media (max-width: 992px) {
+    .quote {
+        font-size: 50px;
+    }
+    p#description {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 35px;
+    }
+    li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote {
+        font-size: 30px;
+    }
+    p#description {
+        font-size: 15px;
+    }
+    .project-description {
+        font-size: 12px;
+    }
 }
